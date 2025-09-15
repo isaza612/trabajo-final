@@ -3,4 +3,4 @@ name: trabajo-final
 description: Helm chart for backend trabajo-final
 type: application
 version: 0.1.0
-appVersion: "1.0.0"
+appVersion: "2.0.0"

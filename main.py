@@ -39,7 +39,7 @@ def get_connection():
 
 @app.get("/api/statusserver", tags=["meta"])
 def test():
-    return {"status": "ok", "version": "1.0.2"}
+    return {"status": "ok", "version": "1.0.1"}
 
 
 # Insertar un registro (solo ID autoincremental)

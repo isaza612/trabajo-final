@@ -2,5 +2,10 @@ apiVersion: v2
 name: trabajo-final
 description: Helm chart for backend trabajo-final
 type: application
-version: 2.0.1
-appVersion: "2.0.1"
+version: 3.0.0
+appVersion: "3.0.0"
+
+dependencies:
+  - name: postgresql
+    version: 15.5.1
+    repository: https://charts.bitnami.com/bitnami

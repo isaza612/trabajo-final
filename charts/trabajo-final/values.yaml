@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: isaza0612/trabajo-final
-  tag: "2.0.1"
+  tag: "3.0.0"
   pullPolicy: IfNotPresent
 
 service:
@@ -30,3 +30,15 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 3
   targetCPUUtilizationPercentage: 70
+
+postgresql:
+  enabled: false   
+  host: postgres-service
+  port: 5432
+  auth:
+    username: pedido
+    password: pedido123
+    database: pedido_db
+  primary:
+    persistence:
+      enabled: false

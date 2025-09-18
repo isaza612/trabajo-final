@@ -17,15 +17,6 @@ app.add_middleware(
 )
 
 
-# Conexión simple a PostgreSQL
-# def get_connection():
-#     return psycopg2.connect(
-#         dbname="pedido_db",
-#         user="pedido",
-#         password="pedido123",
-#         host="localhost",
-#         port="5432",
-#     )
 def get_connection():
     DB_HOST = os.getenv("DB_HOST", "host.docker.internal")
     DB_NAME = os.getenv("DB_NAME", "pedido_db")
@@ -39,7 +30,7 @@ def get_connection():
 
 @app.get("/api/statusserver", tags=["meta"])
 def test():
-    return {"status": "ok", "version": "2.0.1"}
+    return {"status": "ok", "version": "3.0.0"}
 
 
 # Insertar un registro (solo ID autoincremental)
